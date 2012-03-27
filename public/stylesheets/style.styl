@@ -1,0 +1,58 @@
+@import "partials/reset"
+@import "partials/colors"
+@import "partials/fonts"
+@import "partials/effects"
+
+body
+	font-family OrbitronMedium
+	font-size 12px
+	#header
+		overflow auto
+
+		text-shadow 0px 0px 10px app-foreground
+		background-image -webkit-gradient(linear,left bottom,left top, color-stop(0.07, rgb(82,82,82)), color-stop(0.78, rgb(36,36,36)))
+		padding 0px 0px
+
+		h1 
+			font-family OrbitronBold
+			font-size 16px
+			color app-foreground
+
+			padding 10px 20px
+		.menu
+			overflow auto
+
+
+			padding 0px 20px 5px
+
+			ul 
+				li 
+					float left
+					margin-right 15px
+
+
+					a
+						color app-foreground
+
+	#app
+		.right-panel
+			background #eee;
+		.assertions 
+			border-radius 0 0 10px 10px
+			background #000
+			padding 10px
+			overflow-y scroll
+
+			.assert
+				background #010
+				border-radius 10px
+				margin 10px
+
+				&.true 
+					color #0f0
+					text-shadow 0px 0px 5px #090
+				&.false
+					color #f00
+					text-shadow 0px 0px 5px #900
+				&.expired
+					opacity 0.5
