@@ -33,5 +33,9 @@
 	});
 
 	window.assert = assert;
+	window.log = function( str ){
+
+		$('div.assertions').prepend('<div class="assert true">' + (new Date()).toLocaleTimeString() + ": " + str + '</div>');
+	}
 
 }(devLed));

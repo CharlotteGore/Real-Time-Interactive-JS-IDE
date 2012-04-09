@@ -178,7 +178,7 @@ body #app .assertions {
   -moz-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
   background: #000;
-  padding: 10px;
+  padding: 10px 10px 150px;
   overflow-y: scroll;
 }
 body #app .assertions .assert {

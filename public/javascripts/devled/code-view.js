@@ -29,7 +29,7 @@
 				self.container.empty();
 
 				self.editor = ace.edit( self.container[0] );
-				self.editor.setTheme("ace/theme/twilight");
+				self.editor.setTheme("ace/theme/tomorrow_night_bright");
 
 				mode = ace.require("ace/mode/javascript").Mode;
 				self.session = self.editor.getSession()

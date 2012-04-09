@@ -213,6 +213,15 @@
 
 			},
 
+			scrollToEnd : function(){
+			
+				var self = this;
+				self.position( self.state.scroller.limits.max);
+				
+				return self;
+
+			},
+
 			scrollToElement : function(selector){
 				
 				// shouldn't be too hard...

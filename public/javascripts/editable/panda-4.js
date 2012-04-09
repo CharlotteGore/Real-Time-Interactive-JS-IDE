@@ -15,10 +15,18 @@
     // This isn't a private method, but it's only 
     // visible to instances of panda so it's pretty 
     // close. 
-    var wakeUp = function(){
+    var wakeUp = function(a, b, c){
 
         this.isAsleep = false;
+        
+        log('this has run');
+        
+        assert("I've set window.isAsleep again!", typeof window.isAsleep, "boolean");
+        
+        log(b);
 
+        
+    
         return this;
 
     };
@@ -29,9 +37,9 @@
 
         // init is our constructor, it always runs when an
         // instance is created
-		"init" : function(){
+        "init" : function(){
 
-			this.bambooLevel = 0;
+            this.bambooLevel = 0;
 			this.isAsleep = false;
 
 			return this;
@@ -57,7 +65,9 @@
 
 			setTimeout(function(){
 
-				wakeUp.call(self);
+				wakeUp.apply(self,[0,1,0]);
+                
+                //wakeUp();
 
 			}, 1000);
 
@@ -81,7 +91,8 @@ po
 	.goToSleep();
 
 
-assert('po should be asleep', po.isAsleep, true);
+assert('po should be asleep!!', po.isAsleep, true);
+
 assert('po cannot be woken up by us', typeof po.wakeUp, "undefined");
 
 

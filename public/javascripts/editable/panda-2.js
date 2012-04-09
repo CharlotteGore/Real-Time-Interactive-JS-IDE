@@ -58,9 +58,8 @@ var po = new Panda();
 // then we can call our instance methods..
 po
     .eatBamboo()
-	.eatBamboo()
+    .eatBamboo()
 	.goToSleep();
     
     
     
-

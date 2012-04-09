@@ -28,8 +28,6 @@
 
 				self.raw = dmp.patch_apply(patches, self.raw)[0];
 
-				console.log(self.raw);
-
 				fs.writeFile(self.fileName, self.raw, function(){
 
 					callback();

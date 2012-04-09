@@ -27,11 +27,14 @@ Panda.prototype.goToSleep = function(){
     // to our method, we pass it an anonymous function
     // which calls the method using the 'self' variable
     // that still points to our instance's scope.
-    setTimeout(function(){
+    setTimeout(
+    function(){
 
-		self.wakeUp();
+        self.wakeUp();
+        assert('this.wakeup doesn\'t exist', typeof this.wakeUp, "undefined");
 
-	}, 500);
+
+    }, 500);
 
 };
 
@@ -39,7 +42,9 @@ Panda.prototype.wakeUp = function(){
 
     // which means when this runs, we're actually setting
 
-	this.isAsleep = false;
+    this.isAsleep = false;
+
+    assert('bamboo is 2', this.bambooLevel, 2);
 
 	assert("We can see our bamboo level", typeof this.bambooLevel, "number");
     

@@ -14,17 +14,17 @@
 
         this.isAsleep = false;
         
-        callback();
+        callback.call(this);
 
         return this;
 
     };
 
-	panda.addInstanceMethods({
+    panda.addInstanceMethods({
 
-		"init" : function(){
+        "init" : function(){
 
-			this.bambooLevel = 0;
+            this.bambooLevel = 0;
 			this.isAsleep = false;
 
 			return this;
@@ -44,6 +44,7 @@
 			var self = this;
 
 			this.isAsleep = true;
+            
 
 			setTimeout(function(){
 
@@ -72,6 +73,7 @@ po
 	.goToSleep( function(){
  
         assert('Po is awake!', 1, 1);
+        log(this.bambooLevel);
         
  
 	});

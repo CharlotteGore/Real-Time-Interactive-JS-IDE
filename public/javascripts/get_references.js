@@ -5,28 +5,7 @@
 	window.base = top.base;
 	window.NICE = top.NICE;
 	window.assert = top.assert;
-	window.log = function(args){
+	window.log = top.log;
 
-			if(_.isArray(args)){
-
-				_.each(args, function(a){
-
-					window.$('body', document).append($('<p>' + args + '</p>'));
-
-				})
-
-
-			}else{
-
-				window.$('body', document).append($('<p>' + args + '</p>'));
-
-			}
-
-		};
-	window.onerror = function(e){
-
-		window.console.log(e);
-
-	}
 
 }(top.window));
